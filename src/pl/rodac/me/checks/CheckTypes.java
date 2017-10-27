@@ -5,7 +5,10 @@ public enum CheckTypes {
 	FLIGHT,
 	SPEED,
 	NOFALL,
-	HIGH_CPS
+	HIGH_CPS,
+	KILLAURA,
+	FASTBOW,
+	WATERWALK
 	  
 
 }

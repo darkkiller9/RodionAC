@@ -8,11 +8,14 @@ import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import pl.rodac.me.checks.combat.CPS;
+import pl.rodac.me.checks.combat.FastBow;
+import pl.rodac.me.checks.combat.KillAura;
 import pl.rodac.me.checks.movement.Flight;
 import pl.rodac.me.checks.movement.Glide;
 import pl.rodac.me.checks.movement.NoFall;
 import pl.rodac.me.checks.movement.SpeedA;
 import pl.rodac.me.checks.movement.SpeedB;
+import pl.rodac.me.checks.movement.WaterWalk;
 
 
 
@@ -45,7 +48,10 @@ public class Main extends JavaPlugin implements Listener{
 		Bukkit.getServer().getPluginManager().registerEvents(new SpeedA(), this);
 		Bukkit.getServer().getPluginManager().registerEvents(new SpeedB(), this);
 		Bukkit.getServer().getPluginManager().registerEvents(new NoFall(), this);
-		Bukkit.getServer().getPluginManager().registerEvents(new CPS(), this);
+		Bukkit.getServer().getPluginManager().registerEvents(new CPS(this), this);
+		Bukkit.getServer().getPluginManager().registerEvents(new KillAura(), this);
+		Bukkit.getServer().getPluginManager().registerEvents(new FastBow(), this);
+		Bukkit.getServer().getPluginManager().registerEvents(new WaterWalk(), this);
 	}
 	public static Main getInstance(){
     	return instance;
